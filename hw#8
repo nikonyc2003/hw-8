@@ -1,0 +1,57 @@
+#include<iostream>
+#include<fstream>
+using namespace std;
+//Create three functions
+string result;
+char ch;
+string toUpperCase(string word){
+  for(int i = 0; i < word.size(); i++){
+  if(ch >= 96 && ch <= 123)
+  ch -= 32;
+  result += ch;
+  }
+  return result;
+}
+
+string toLowerCase(string word{
+  string result;
+  char ch;
+  for(int i = 0; i < word.size(); i++){
+  if(ch2 >= 65 && ch2 <= 90)
+    ch += 32;
+  result += ch;
+  }
+  return result;
+}
+
+bool equals(string word1, string word2){
+  if (word1 == word2)
+    return true;
+  else
+    return false;
+}
+
+int main(){
+//fill in step 2 and 3 of File I/O
+ifstream f;
+f.open("hw8data.txt");
+string word1, word 2;
+f >> word1;
+f >> word2;
+
+while(!f.eof()){
+    cout << "Words in lowercase please: " << toLowerCase(word1) << " " << toLowerCase(word2) << endl;
+    cout << "Words in Uppercase please: " << toUpperCase(word1) << " " << toUpperCase(word2) << endl;
+    if(equals(word1, word2))
+    cout << "Both String are equal." << endl;
+      else
+          cout << "The input strings are different." << endl;
+      f >> word1;
+      f >> word2;
+  }
+  f.close();
+  return 0;
+}
+    
+    
+ 
